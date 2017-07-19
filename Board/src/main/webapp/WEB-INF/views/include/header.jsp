@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Spring MVC Board</title>
+    <title>My Dog Diary</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
     <link href="/board/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -35,7 +35,7 @@
       <header class="main-header">
         <!-- Logo -->
         <a href="#" class="logo">
-          <span class="logo-lg">GogumaBoard</span>
+          <span class="logo-lg">My Dog Diary</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">

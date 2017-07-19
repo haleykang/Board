@@ -7,8 +7,13 @@
 <%@include file="include/header.jsp"%>
 <section class="content">
 	<div class="box">
+		<!-- 1. 게시판 글쓰기 구현 -->
 		<div class="box-header with-border">
-			<a href="#"><h3 class="box-title">게시판 글쓰기</h3></a>
+			<a href="board/register"><h3 class="box-title">게시판 글쓰기</h3></a>
+		</div>
+		<!-- 2. 게시판 목록 보기 구현 -->
+		<div class="box-header with-border">
+			<a href="board/list"><h3 class="box-title">게시판 목록보기</h3></a>
 		</div>
 	</div>
 </section>

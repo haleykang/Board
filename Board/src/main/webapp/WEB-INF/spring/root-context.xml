@@ -7,10 +7,26 @@
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		id="dataSource">
 		<property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
-		<property value="jdbc:oracle:thin:@192.168.0.30:1521:xe"
+		<property value="jdbc:oracle:thin:@192.168.0.32:1521:xe"
 			name="url" />
 		<property value="user02" name="username" />
 		<property value="user02" name="password" />
+	</bean>
+
+	<!-- 추가 -->
+	<!-- MyBatis 연동 -->
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+		<property name="dataSource" ref="dataSource" />
+		<!-- Mybatis 환경 설정 파일 경로 설정 -->
+		<property value="classpath:/mybatis/mybatis-config.xml" name="configLocation" />
+		<!-- Mapper 파일 경로 설정 -->
+		<property value="classpath:/mybatis/mappers/*.xml" name="mapperLocations" />
+	</bean>
+
+	<!-- SqlSessionTemplate 사용 설정 -->
+	<bean class="org.mybatis.spring.SqlSessionTemplate" id="sqlSession"
+		destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
 
