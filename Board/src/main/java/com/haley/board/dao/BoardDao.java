@@ -14,4 +14,14 @@ public interface BoardDao {
 	// -> select는 where 절의 유무에 따라 매개변수가 결정됨
 	public List<BoardVO> boardList();
 
+	// 3-1 상세보기 처리 함수(글 번호 기준)
+	public BoardVO getBoard(int bno);
+
+	// 3-2 상세보기 시 조회수를 1 증가 시키는 메소드
+	public int updateCount(int bno);
+	
+	// 4. 게시글 삭제 메소드
+	public int deleteBoard(int bno);
+	
+
 }

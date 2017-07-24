@@ -18,4 +18,13 @@ public interface BoardService {
 	// 2. 글 목록보기 처리 메소드 -> 매개변수 없으니 간단!
 	public List<BoardVO> boardList();
 
+	// 3. 상세보기 구현
+	public BoardVO getBoard(int bno);
+
+	// 4. 게시글 삭제 구현
+	public int deleteBoard(int bno);
+
+	// 5. 게시글 수정 구현 - 하나의 데이터를 가져오는 메소드
+	public BoardVO updateBoard(int bno);
+
 }
