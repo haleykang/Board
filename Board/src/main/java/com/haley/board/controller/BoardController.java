@@ -102,4 +102,15 @@ public class BoardController {
 
 	}
 
+	// 7. 수정 실제 처리 메소드
+	@RequestMapping(value = "modify", method = RequestMethod.POST)
+	public String doUpdate(BoardVO vo, RedirectAttributes attr) {
+		// 1) 업데이트하기(jsp 페이지에서 name의 값이 VO 변수에 저장됨)
+		boardService.update(vo);
+		// 2) msg 메세지 전달
+		attr.addFlashAttribute("msg", "게시글이 수정되었습니다.");
+		// 3) list 페이지로 이동
+		return "redirect:list";
+	}
+
 }

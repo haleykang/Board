@@ -27,4 +27,6 @@ public interface BoardService {
 	// 5. 게시글 수정 구현 - 하나의 데이터를 가져오는 메소드
 	public BoardVO updateBoard(int bno);
 
+	// 6. 실제로 데이터 수정 하는 메소드 구현
+	public int update(BoardVO vo);
 }

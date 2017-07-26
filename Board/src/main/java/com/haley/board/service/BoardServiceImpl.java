@@ -61,13 +61,19 @@ public class BoardServiceImpl implements BoardService {
 
 		return boardDao.deleteBoard(bno);
 	}
-	
-	
-	// 5. 게시글 수정 - 하나의 데이터를 가져와서 리턴 
+
+	// 5. 게시글 수정 - 하나의 데이터를 가져와서 리턴
 	@Override
 	public BoardVO updateBoard(int bno) {
 		// getBoard() 함수 재사용해서 글 번호에 따른 테이블 값 가져오기
 		return boardDao.getBoard(bno);
+	}
+
+	// 6. 실제로 게시글 수정하는 메소드
+	@Override
+	public int update(BoardVO vo) {
+
+		return boardDao.update(vo);
 	}
 
 }

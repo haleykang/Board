@@ -19,9 +19,11 @@ public interface BoardDao {
 
 	// 3-2 상세보기 시 조회수를 1 증가 시키는 메소드
 	public int updateCount(int bno);
-	
+
 	// 4. 게시글 삭제 메소드
 	public int deleteBoard(int bno);
-	
+
+	// 5. 게시글 수정 메소드 -> insert와 같은 모양
+	public int update(BoardVO vo);
 
 }

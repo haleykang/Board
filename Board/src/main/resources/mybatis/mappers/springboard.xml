@@ -47,4 +47,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where bno = #{bno}
 	</delete>
 
+	<!-- 5. 게시글 수정 SQL -->
+	<!-- public int update(BoardVO vo); -->
+	<!-- 작성자는 못 바꾸도록 -->
+	<update id="update" parameterType="BoardVO">
+		update springboard
+		set
+		title=#{title}, content=#{content}
+		where bno = #{bno}
+	</update>
+
+
 </mapper>

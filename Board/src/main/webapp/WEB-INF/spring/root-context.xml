@@ -7,7 +7,7 @@
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		id="dataSource">
 		<property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
-		<property value="jdbc:oracle:thin:@192.168.0.42:1521:xe"
+		<property value="jdbc:oracle:thin:@192.168.0.43:1521:xe"
 			name="url" />
 		<property value="user02" name="username" />
 		<property value="user02" name="password" />
