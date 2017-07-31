@@ -25,8 +25,9 @@
 			</div>
 
 			<div class="form-group">
+				<!-- 작성자 이름에 로그인한 사람의 id가 출력되도록 수정 -->
 				<label>작성자</label> <input type="text" name="id" class="form-control"
-					placeholder="작성자를 입력하세요" required>
+					value="${login.id}" readonly="readonly">
 			</div>
 		</div>
 

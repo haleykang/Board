@@ -20,7 +20,7 @@
 			<c:if test="${login != null}">
 				<a href="user/logout"><h3 class="box-title">로그아웃</h3></a>
 			</c:if>
-
+           
 		</div>
 
 		<!-- 1. 게시판 글쓰기 구현 -->

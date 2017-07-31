@@ -109,6 +109,7 @@ public class BoardController {
 		boardService.update(vo);
 		// 2) msg 메세지 전달
 		attr.addFlashAttribute("msg", "게시글이 수정되었습니다.");
+
 		// 3) list 페이지로 이동
 		return "redirect:list";
 	}
