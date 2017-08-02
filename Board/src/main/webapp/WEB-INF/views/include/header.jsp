@@ -43,8 +43,8 @@
 
 		<header class="main-header">
 			<!-- Logo -->
-			<a href="#" class="logo"> <span class="logo-lg">My Dog
-					Diary</span>
+			<a href="/board" class="logo"> <span class="logo-lg">My
+					Dog Diary</span>
 			</a>
 			<!-- Header Navbar: style can be found in header.less -->
 			<nav class="navbar navbar-static-top" role="navigation">
@@ -68,12 +68,15 @@
 						<span>게시판</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 					<ul class="treeview-menu">
-						<li><a href=""><i class="fa fa-circle-o"></i> 목록보기</a></li>
-						<li><a href=""><i class="fa fa-circle-o"></i> 게시물쓰기</a></li>
+						<li><a href="/board/board/list"><i class="fa fa-circle-o"></i>
+								목록보기</a></li>
+						<li><a href="/board/board/register"><i
+								class="fa fa-circle-o"></i> 게시물쓰기</a></li>
 					</ul></li>
-				<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>로그인</span></a></li>
-				<li><a href="#"><i class="fa fa-circle-o text-yellow"></i>
-						<span>회원가입</span></a></li>
+				<li><a href="/board/user/login"><i
+						class="fa fa-circle-o text-red"></i> <span>로그인</span></a></li>
+				<li><a href="/board/user/join"><i
+						class="fa fa-circle-o text-yellow"></i> <span>회원가입</span></a></li>
 			</ul>
 		</section>
 		<!-- /.sidebar -->
@@ -85,6 +88,6 @@
 		<section class="content-header">
 			<h1>게시판</h1>
 			<ol class="breadcrumb">
-				<li><a href="./"><i class="fa fa-dashboard"></i> Home</a></li>
+				<li><a href="/board"><i class="fa fa-dashboard"></i> Home</a></li>
 			</ol>
 		</section>

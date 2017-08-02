@@ -7,6 +7,8 @@ public class UserVO {
 	private String id;
 	private String pw;
 	private String name;
+	// 이미지 변수 추가
+	private String image;
 
 	// 2. getter setter
 	public String getId() {
@@ -33,10 +35,18 @@ public class UserVO {
 		this.name = name;
 	}
 
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	// 3. toString()
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", pw=" + pw + ", name=" + name + "]";
+		return "UserVO [id=" + id + ", pw=" + pw + ", name=" + name + ", image=" + image + "]";
 	}
 
 }

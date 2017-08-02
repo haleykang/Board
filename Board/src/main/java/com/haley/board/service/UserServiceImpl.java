@@ -19,4 +19,18 @@ public class UserServiceImpl implements UserService {
 		return userDao.login(userVO);
 	}
 
+	// 2. 아이디 중복 체크
+	@Override
+	public boolean idCheck(String id) {
+		
+		// 1) 아이디 확인
+		String result = userDao.idCheck(id);
+		// 2) 아이디가 없으면 true
+		if (result == null) {
+			return true;
+		}
+		// 3) 동일한 아이디가 있으면 false
+		return false;
+	}
+
 }

@@ -56,7 +56,11 @@
 					</div>
 					<div class="col-xs-2"></div>
 					<div class="col-xs-6">
-						<button class="btn btn-success btn-block btn-flat">회원가입</button>
+						<!-- 회원가입 링크 추가 -->
+						<!-- 링크가 헷갈리면 /프로젝트URL/Controller 요청 포맷/요청 이렇게 만들기-->
+						<!-- 프로젝트 URL 앞에 / 슬래쉬 꼭 추가 -->
+						<a href="/board/user/join"
+							class="btn btn-success btn-block btn-flat">회원가입</a>
 					</div>
 				</div>
 			</form>

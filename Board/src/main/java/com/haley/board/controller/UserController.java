@@ -60,4 +60,11 @@ public class UserController {
 		// 시작 페이지로 이동
 		return "redirect:/";
 	}
+
+	// 4. 회원가입 페이지로 이동
+	@RequestMapping(value = "join", method = RequestMethod.GET)
+	public void toJoin() {
+
+	}
+
 }

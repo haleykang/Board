@@ -8,4 +8,7 @@ public interface UserDao {
 	// 1. 로그인 처리 메소드
 	public UserVO login(UserVO userVO);
 
+	// 2. 회원가입 시 아이디 중복 검사를 위한 메소드
+	public String idCheck(String id);
+
 }
