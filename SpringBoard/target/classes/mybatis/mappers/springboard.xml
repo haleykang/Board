@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- springboard 테이블 mapper 파일 -->
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+
+	<!-- 1. 글쓰기 public int writeBoard(BoardVO vo); -->
+	<insert id="writeBoard" parameterType="BoardVO">
+		insert into springboard(
+		bno,title,content,id,ip,image)
+		values(boardseq.nextval,#{title},#{content},#{id},#{ip}, #{image})
+	</insert>
+
+	<!-- 2. 목록 보기 public List<BoardVO> showList(); -->
+	<!-- 2개 이상의 데이터를 select 할 때는 꼭 order by로 정렬해주기! -->
+	<!-- 글 번호가 높은 글이 위로 올라오도록 정렬 -->
+	<select id="showList" resultType="BoardVO">
+		select * from springboard
+		order
+		by bno desc
+	</select>
+
+	<!-- 3. 상세보기 -->
+	<!-- 3-1)public BoardVO getBoard(int bno); -->
+	<select id="getBoard" resultType="BoardVO" parameterType="java.lang.Integer">
+		select
+		* from springboard
+		where bno = #{bno}
+	</select>
+
+	<!-- 3-2)public int updateCount(int bno); -->
+	<update id="updateCount" parameterType="java.lang.Integer">
+		update springboard
+		set
+		readcnt = readcnt + 1
+		where bno = #{bno}
+	</update>
+
+	<!-- 4. 게시글 삭제 -->
+	<!-- public int deleteBoard(int bno); -->
+	<delete id="deleteBoard" parameterType="java.lang.Integer">
+		delete from springboard
+		where bno = #{bno}
+	</delete>
+
+	<!-- 5. 게시글 수정 -->
+	<!-- public int updateBoard(BoardVO vo); -->
+	<update id="myUpdate" parameterType="java.lang.Integer">
+		update springboard
+		set
+		title=#{title},content=#{content}
+		where bno = #{bno}
+	</update>
+
+
+</mapper>
